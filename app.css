@@ -1,0 +1,145 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+} 
+html {
+    font-size:62.5%; 
+    box-sizing: border-box;
+}
+body {
+    background-image: linear-gradient(to right bottom,rgba(231,76,60, .5), rgba(217,30,24,.8));
+    min-height: 100vh;
+}
+.header {
+    background-image: linear-gradient(110deg, rgba(231,76,60, .3) 0%,
+     rgba(231,76,60, .9) 50%,  rgba(217,30,24,.0) 50%, 
+    rgba(247, 114, 110, .1) 100%);
+    padding: 5rem 0 ;
+    text-align: center;
+    text-transform: uppercase;
+    color:white; 
+}
+.container {
+   max-width: 110rem;
+   margin:auto;
+   box-shadow: 0 .5rem 1rem rgba(0,0,0, .4); 
+   border-top: 2px solid #fff;
+}
+.section-players{
+    position: relative;
+    background-color: #E0E0E0;
+}
+.section-players::after{
+    display: table;
+    clear: both;
+    content: "";
+}
+.section-player1, .section-player2{
+    padding: 30rem 0;
+    width: 50%;
+    float: left;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+.active-player {
+    background-color: #f1f1f1;
+    box-shadow: 0 .5rem .8rem rgba(0,0,0, .4);
+}
+.player1__name, .player2__name {
+   font-size: 3.5rem;
+   position: absolute;
+   top:25%;
+   left:50%;
+   transform: translate(-50%, -50%);
+}
+.score-0, .score-1 {
+    font-size: 5rem;
+    position: absolute;
+    top:38%;
+    left:50%;
+    transform: translate(-50%, -50%);  
+}
+.player1__turns-left, .player2__turns-left {
+    font-size: 2rem;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.player1__img, .player2__img {  
+    width:5rem;
+    height:5rem;
+    box-shadow: 0 .2rem .5rem rgba(0,0,0, .5);
+    position: absolute;
+    top:60%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.players__menu{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 10rem 7rem;
+    z-index: 5;
+}
+.players__btn-newGame{
+    position: absolute;
+    top:0;
+    left:0;   
+}
+.dice__img {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:8rem;
+    height: 8rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0, .5);
+}
+.players__btn-roll {
+    position: absolute;
+    bottom:0;
+    left:0;
+}
+.btn {
+    background-color: rgba(217,30,24,.7); 
+    border: none;
+    color: white;
+    padding: 1rem 2.5rem;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 1.5rem;
+    transition: all .5s;
+    box-shadow: 0 .3rem .5rem rgba(0,0,0, .6);
+    cursor: pointer;
+    width: 100%
+}
+.btn:hover{
+    background-color: rgba(231,76,60);
+}
+.btn:active{
+    box-shadow: 0 0 0 rgba(0,0,0,.4);
+}
+.btn:focus {
+    outline: none; 
+}
+button {
+    display: block;
+}
+@media (max-width:38rem){
+    .btn{
+       width:80%;
+       margin-left: 10%;
+       padding: .8rem .5rem;
+    }
+    html {
+        font-size: 50%;
+    }
+}
